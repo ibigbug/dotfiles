@@ -13,7 +13,7 @@
     "newcap": true,
     "noarg": true,
     "noempty": true,
-    "nonew": true,
+    //"nonew": true,
     "plusplus": false,
     "quotmark": true,
     "undef": true,
@@ -64,5 +64,10 @@
 
     // Undocumented
     "maxerr": 100,
-    "predef": ["angular"]
+    "predef": [
+        "angular",
+        "define",
+        "module",
+        "exports"
+    ]
 }
