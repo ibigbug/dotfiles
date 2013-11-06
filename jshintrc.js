@@ -4,12 +4,12 @@
     "camelcase": false,
     "curly": false,
     "eqeqeq": true,
-    "es3": true,
-    "forin": true,
+    "es5": false,
+    "forin": false,
     "freeze": true,
     "immed": true,
     "indent": 2,
-    "latedef": "nofunc",
+    "latedef": false,
     "newcap": true,
     "noarg": true,
     "noempty": true,
@@ -54,10 +54,10 @@
     // Environments
     "browser": true,
     "devel": false,
-    "node": false,
+    "node": true,
 
     //Legacy
-    "nomen": true,
+    "nomen": false,
     "onevar": false,
     "passfail": false,
     "white": true,
@@ -68,6 +68,8 @@
         "angular",
         "define",
         "module",
-        "exports"
+        "exports",
+        "require",
+        "seajs"
     ]
 }
