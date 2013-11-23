@@ -33,7 +33,7 @@
     "eqnull": false,
     "esnext": false,
     "evil": false,
-    "expr": false,
+    "expr": true,
     "funcscope": false,
     "globalstrict": false,
     "iterator": false,
