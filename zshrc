@@ -3,27 +3,26 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 
-export UPDATE_ZSH_DAYS=15
-
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(git python brew)
+alias v='mvim -v'
+alias vi='mvim -v'
+alias py='python'
+alias node='node --harmony'
+
+plugins=(git brew python pip)
 
 source $ZSH/oh-my-zsh.sh
-
-# User configuration
+bindkey -e
 
 export LANG=en_US.UTF-8
 
 if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
+  export EDITOR='vim'
 else
-   export EDITOR='mvim -v'
+  export EDITOR='mvim -v'
 fi
 
-alias nettop="nettop -nm tcp"
-alias vi="mvim -v"
-alias v="mvim -v"
+source ~/.envrc
 
-export WORKON_HOME="$HOME/.venvs"
-source /usr/local/bin/virtualenvwrapper.sh
+. ~/.spm_completion
