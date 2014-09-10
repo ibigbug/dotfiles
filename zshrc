@@ -26,5 +26,4 @@ alias vi="mvim -v"
 alias v="mvim -v"
 alias e="emacs"
 
-export WORKON_HOME="$HOME/.venvs"
-source /usr/local/bin/virtualenvwrapper.sh
+source ~/.envrc
