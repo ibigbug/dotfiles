@@ -25,4 +25,5 @@ else
   export EDITOR='mvim -v'
 fi
 
-source ~/.envrc
+. ~/.envrc
+. ~/.spm_completion
