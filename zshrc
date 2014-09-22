@@ -10,7 +10,7 @@ alias e="emacs"
 alias v='mvim -v'
 alias vi='mvim -v'
 alias py='python'
-alias node='node --harmony'
+alias nodeh='node --harmony'
 
 plugins=(osx git brew python pip)
 
