@@ -5,12 +5,15 @@ ZSH_THEME="robbyrussell"
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-alias nettop="nettop -nm tcp"
 alias e="emacs"
 alias v='mvim -v'
 alias vi='mvim -v'
 alias py='python'
 alias nodeh='node --harmony'
+
+# functional aliases
+alias ducks="du -cks * | sort -rn | head -11"
+alias nettop="nettop -nm tcp"
 
 plugins=(osx git brew python pip)
 
