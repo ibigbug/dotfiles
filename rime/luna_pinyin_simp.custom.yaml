@@ -15,3 +15,4 @@ patch:
     enable_completion: false
     prefix: "`"
     tips: 〔表情〕
+  punctuator/import_preset: alternative
