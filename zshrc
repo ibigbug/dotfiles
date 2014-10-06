@@ -22,11 +22,7 @@ bindkey -e
 
 export LANG=en_US.UTF-8
 
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim -v'
-fi
+export EDITOR='vim'
 
 . ~/.envrc
 . ~/.spm_completion
