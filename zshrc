@@ -11,6 +11,9 @@ alias vi='mvim -v'
 alias py='python'
 alias nodeh='node --harmony'
 
+alias rm="rm -i"
+alias cp="cp -i"
+
 # functional aliases
 alias ducks="du -cks * | sort -rn | head -11"
 alias nettop="nettop -nm tcp"
