@@ -15,7 +15,7 @@ alias nodeh='node --harmony'
 alias ducks="du -cks * | sort -rn | head -11"
 alias nettop="nettop -nm tcp"
 
-plugins=(osx git brew python pip)
+plugins=(git brew python pip)
 
 source $ZSH/oh-my-zsh.sh
 bindkey -e
