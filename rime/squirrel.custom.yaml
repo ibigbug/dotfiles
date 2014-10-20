@@ -18,21 +18,5 @@ patch:
 #   暗堂 - dark_temple
 #   星際我爭霸 - starcraft
 #   谷歌 - google
-  app_options:
-    com.apple.Safari:
-      ascii_mode: true
-    com.alfredapp.Alfred:
-      ascii_mode: true
-    com.apple.Terminal:
-      ascii_mode: true
-      no_inline: true
-    com.blacktree.Quicksilver:
-      ascii_mode: true
-    com.googlecode.iterm2:
-      ascii_mode: true
-      no_inline: true
-    "com.runningwithcrayons.Alfred-2":
-      ascii_mode: true
-    org.vim.MacVim:
-      ascii_mode: true
-      no_inline: true
+  app_options/com.google.iterm:
+    ascii_mode: true
