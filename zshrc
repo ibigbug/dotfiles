@@ -9,6 +9,7 @@ alias e="emacs"
 alias v='mvim -v'
 alias vi='mvim -v'
 alias py='python'
+alias fuckgfw='proxychains4 -q'
 alias nodeh='node --harmony'
 
 alias rm="rm -i"
