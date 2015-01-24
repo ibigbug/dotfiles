@@ -33,11 +33,14 @@ export EDITOR='vim'
 
 tmux_init()
 {
-    tmux new-session -s "hehe" -d -n "tmux"    # 开启一个会话
+    tmux new-session -s "fg" -d -n "fg-jobs"    # 开启一个会话
+    tmux new-window -n "bg"
+    tmux split-window -h                # 开启一个竖屏
+    tmux split-window -v         # 开启一个横屏,并执行top命令
     tmux -2 attach-session -d           # tmux -2强制启用256color，连接已开启的tmux
 }
 
-# 判断是否已有开启的tmux会话，没有则开启
-if which tmux 2>&1 >/dev/null; then
+  # 判断是否已有开启的tmux会话，没有则开启
+  if which tmux 2>&1 >/dev/null; then
     test -z "$TMUX" && (tmux attach || tmux_init)
-fi
+  fi
