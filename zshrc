@@ -35,7 +35,6 @@ tmux_init()
 {
     tmux new-session -s "fg" -d -n "fg-jobs"    # 开启一个会话
     tmux new-window -n "bg"
-    tmux split-window -h                # 开启一个竖屏
     tmux split-window -v         # 开启一个横屏,并执行top命令
     tmux -2 attach-session -d           # tmux -2强制启用256color，连接已开启的tmux
 }
