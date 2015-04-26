@@ -39,12 +39,12 @@ tmux_init()
   tmux split-window -v         # 开启一个横屏,并执行top命令
   tmux -2 attach-session -d           # tmux -2强制启用256color，连接已开启的tmux
 
-  # 判断是否已有开启的tmux会话，没有则开启
-  if which tmux 2>&1 >/dev/null; then
-    test -z "$TMUX" && (tmux attach || tmux_init)
-  fi
 }
+# 判断是否已有开启的tmux会话，没有则开启
+if which tmux 2>&1 >/dev/null; then
+  test -z "$TMUX" && (tmux attach || tmux_init)
+fi
 
-function mov2gif {
-  ffmpeg -i $1 -s 600x400 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > out.gif
+mov2gif() {
+ffmpeg -i $1 -s 600x400 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > out.gif
 }
