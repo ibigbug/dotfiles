@@ -19,7 +19,7 @@ alias cp="cp -i"
 alias ducks="du -cks * | sort -rn | head -11"
 alias nettop="nettop -nm tcp"
 
-plugins=(git brew python pip)
+plugins=(git brew python pip zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 bindkey -e
@@ -46,5 +46,6 @@ if which tmux 2>&1 >/dev/null; then
 fi
 
 mov2gif() {
-ffmpeg -i $1 -s 600x400 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > out.gif
+  ffmpeg -i "$1" -vf scale=800:-1 -r 10 -f image2pipe -vcodec ppm - |\
+    convert -delay 5 -layers Optimize -loop 0 - "$2"
 }
