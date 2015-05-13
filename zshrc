@@ -49,3 +49,6 @@ mov2gif() {
   ffmpeg -i "$1" -vf scale=800:-1 -r 10 -f image2pipe -vcodec ppm - |\
     convert -delay 5 -layers Optimize -loop 0 - "$2"
 }
+
+export NVM_DIR="/Users/yuweiba/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
