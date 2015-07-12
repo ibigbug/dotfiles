@@ -6,11 +6,10 @@ ZSH_THEME="ys"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 alias e="emacsclient"
-alias v='mvim -v'
-alias vi='mvim -v'
+alias v="vim"
+alias vi="vim"
 alias py='python'
 alias fuckgfw='proxychains4 -q'
-alias nodeh='node --harmony'
 
 alias rm="rm -i"
 alias cp="cp -i"
