@@ -18,7 +18,7 @@ alias cp="cp -i"
 alias ducks="du -cks * | sort -rn | head -11"
 alias nettop="nettop -nm tcp"
 
-plugins=(git brew python pip zsh-syntax-highlighting)
+plugins=(git zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 bindkey -e
