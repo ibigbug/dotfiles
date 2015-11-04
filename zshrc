@@ -6,6 +6,7 @@ ZSH_THEME="ys"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 alias e="emacsclient"
+alias em="emacs -nw"
 alias v="mvim -v"
 alias vi="mvim -v"
 alias py='python'

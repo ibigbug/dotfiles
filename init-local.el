@@ -1,19 +1,30 @@
 ;;; Code:
 
-(defun default-chinese-im ()
-  " Set up default chinese input method"
-  (if (equal current-language-environment "Chinese-GB")
-      (setq default-input-method "chinese-py")))
+(add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
 
+(require 'flycheck)
 
-(add-hook 'set-language-environment-hook 'default-chinese-im)
+(add-hook 'after-init-hook #'global-flycheck-mode)
 
+(setq-default flycheck-disabled-checkers
+              (append flycheck-disabled-checkers
+                      '(javascript-jshint)))
 
-(add-hook 'text-mode-hook (lambda () (set-input-method 'chinese-py) (toggle-input-method)))
+(flycheck-add-mode 'javascript-eslint 'web-mode)
 
-(global-set-key (kbd "C-?") 'help-command)
-(global-set-key (kbd "M-?") 'mark-paragraph)
-(global-set-key (kbd "C-h") 'delete-backward-char)
-(global-set-key (kbd "M-h") 'backward-kill-word)
+(setq-default flycheck-disabled-checkers
+              (append flycheck-disabled-checkers
+                      '(json-jsonlst)))
+
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
+(defun my-web-mode-hook ()
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2))
+
+(add-hook 'web-mode-hook 'my-web-mode-hook)
+
 
 (provide 'init-local)
