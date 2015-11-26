@@ -26,5 +26,6 @@
 
 (add-hook 'web-mode-hook 'my-web-mode-hook)
 
+(require 'emmet-mode)
 
 (provide 'init-local)
