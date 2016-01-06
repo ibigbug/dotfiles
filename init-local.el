@@ -26,6 +26,8 @@
 
 (add-hook 'web-mode-hook 'my-web-mode-hook)
 
+(define-key global-map (kbd "RET") 'newline-and-indent)
+
 (require 'emmet-mode)
 
-(provide 'init-local)
+;(provide 'init-local)
