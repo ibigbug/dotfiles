@@ -19,7 +19,6 @@ alias cp="cp -i"
 alias ducks="du -cks * | sort -rn | head -11"
 alias nettop="nettop -nm tcp"
 
-plugins=(git zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 bindkey -e
@@ -30,7 +29,6 @@ export EDITOR='vim'
 export ALTERNATE_EDITOR=""
 
 . ~/.envrc
-. ~/.spm_completion
 
 tmux_init()
 {
