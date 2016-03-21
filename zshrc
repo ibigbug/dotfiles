@@ -5,6 +5,8 @@ ZSH_THEME="ys"
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+plugins=(python git docker zsh-syntax-highlighting)
+
 alias e="emacsclient"
 alias em="emacs -nw"
 alias v="mvim -v"
