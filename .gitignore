@@ -1,1 +1,7 @@
 vim_sftp_conf
+emacs.d/elpa
+emacs.d/.*
+emacs.d/*.dat
+emacs.d/ido.last
+emacs.d/smex-items
+emacs.d/places
