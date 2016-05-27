@@ -1,3 +1,4 @@
+;;; 
 (require 'package)
 (setq package-list '(
 		     smex
@@ -6,10 +7,12 @@
 		     js2-mode
 		     json-mode
 		     web-mode
-		     exec-path-from-shell
-		     ))
-(add-to-list 'package-archives
-	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
+		     exec-path-from-shell))
+
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+;("marmalade" . "https://marmalade-repo.org/packages/")
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+
 
 (package-initialize)
 
