@@ -37,7 +37,6 @@ tmux_init()
 {
   tmux new-session -s "daily-works" -d -n "fg-jobs"    # 开启一个会话
   tmux -2 attach-session -d           # tmux -2强制启用256color，连接已开启的tmux
-
 }
 # 判断是否已有开启的tmux会话，没有则开启
 if which tmux 2>&1 >/dev/null; then
