@@ -43,10 +43,13 @@ if which tmux 2>&1 >/dev/null; then
   test -z "$TMUX" && (tmux attach || tmux_init)
 fi
 
-mov2gif() {
-  ffmpeg -i "$1" -vf scale=800:-1 -r 10 -f image2pipe -vcodec ppm - |\
-    convert -delay 5 -layers Optimize -loop 0 - "$2"
+share_playground() {
+  curl -s -XPOST https://play.golang.org/share -d @$1 | xargs -I{} echo "https://play.golang.org/p/{}"
 }
 
-export NVM_DIR="/Users/yuweiba/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+if [ -f "${HOME}/.gpg-agent-info" ]; then  
+  . "${HOME}/.gpg-agent-info"
+  export GPG_AGENT_INFO
+  export SSH_AUTH_SOCK
+  export SSH_AGENT_PID
+fi  
