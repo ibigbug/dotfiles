@@ -11,7 +11,8 @@ alias e="emacsclient"
 alias em="emacs -nw"
 alias v="mvim -v"
 alias vi="mvim -v"
-alias py='python'
+alias py='python3'
+alias py2='python2'
 alias fuckgfw='proxychains4 -q'
 
 alias rm="rm -i"
