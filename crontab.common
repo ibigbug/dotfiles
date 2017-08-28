@@ -1,0 +1,1 @@
+30 12 * * * echo `date` >> $HOME/Library/Logs/cron.log && /usr/local/bin/brew up >> $HOME/Library/Logs/cron.log
