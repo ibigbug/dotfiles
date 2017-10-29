@@ -2,4 +2,4 @@
 30 12 * * * echo `date` >> $HOME/Library/Logs/cron.log && /usr/local/bin/brew up >> $HOME/Library/Logs/cron.log
 
 # upgrad zsh on Monday
-* * * * 1 echo `date` >> $HOME/Library/Logs/cron.log && sh $HOME/.oh-my-zsh/tools/upgrade.sh >> $HOME/Library/Logs/cron.log
+* * * * 1 echo `date` >> sh $HOME/Library/Logs/cron.log && $HOME/.oh-my-zsh/tools/upgrade.sh >> $HOME/Library/Logs/cron.log

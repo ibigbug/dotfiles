@@ -50,9 +50,9 @@ share_playground() {
   curl -s -XPOST https://play.golang.org/share -d @$1 | xargs -I{} echo "https://play.golang.org/p/{}"
 }
 
-if [ -f "${HOME}/.gpg-agent-info" ]; then  
-  . "${HOME}/.gpg-agent-info"
-  export GPG_AGENT_INFO
-  export SSH_AUTH_SOCK
-  export SSH_AGENT_PID
-fi  
+#if [ -f "${HOME}/.gpg-agent-info" ]; then  
+  #. "${HOME}/.gpg-agent-info"
+  #export GPG_AGENT_INFO
+  #export SSH_AUTH_SOCK
+  #export SSH_AGENT_PID
+#fi  
