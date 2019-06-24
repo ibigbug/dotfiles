@@ -56,3 +56,9 @@ share_playground() {
   #export SSH_AUTH_SOCK
   #export SSH_AGENT_PID
 #fi  
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/yuweiba/workplace/tools/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/yuweiba/workplace/tools/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/yuweiba/workplace/tools/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/yuweiba/workplace/tools/google-cloud-sdk/completion.zsh.inc'; fi
