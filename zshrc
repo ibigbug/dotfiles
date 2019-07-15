@@ -7,12 +7,12 @@ ZSH_THEME="ys"
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(python git docker zsh-syntax-highlighting)
+plugins=(python git docker)
 
 alias e="emacsclient"
 alias em="emacs -nw"
-alias v="nvim -v"
-alias vi="nvim -v"
+alias v="nvim"
+alias vi="nvim"
 alias py='python3'
 alias py2='python2'
 alias fuckgfw='proxychains4 -q'
