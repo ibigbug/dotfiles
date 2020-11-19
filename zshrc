@@ -38,16 +38,20 @@ export ALTERNATE_EDITOR="vim"
 
 tmux_init()
 {
-  tmux new-session -s "daily-works" -d -n "fg-jobs"    # 开启一个会话
-  tmux -2 attach-session -d           # tmux -2强制启用256color，连接已开启的tmux
+  tmux new-session -s "daily-works" -d -n "fg-jobs" -c $HOME
+  tmux -2 attach-session -d
 }
 
 if which tmux 2>&1 >/dev/null; then
   test -z "$TMUX" && (tmux attach || tmux_init)
 fi
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/yuweiba/workplace/tools/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/yuweiba/workplace/tools/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/ozbnb/Tools/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ozbnb/Tools/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/yuweiba/workplace/tools/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/yuweiba/workplace/tools/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/ozbnb/Tools/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ozbnb/Tools/google-cloud-sdk/completion.zsh.inc'; fi
