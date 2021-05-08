@@ -45,3 +45,5 @@ tmux_init()
 if which tmux 2>&1 >/dev/null; then
   test -z "$TMUX" && (tmux attach || tmux_init)
 fi
+
+. $HOME/.envrc
