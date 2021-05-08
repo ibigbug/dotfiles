@@ -3,7 +3,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 DISABLE_AUTO_UPDATE="true"
 
-ZSH_THEME="ys"
+ZSH_THEME="candy"
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
