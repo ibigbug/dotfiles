@@ -34,8 +34,6 @@ export LANG=en_US.UTF-8
 export EDITOR='nano'
 export ALTERNATE_EDITOR="vim"
 
-. ~/.envrc
-
 tmux_init()
 {
   tmux new-session -s "daily-works" -d -n "fg-jobs" -c $HOME
