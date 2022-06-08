@@ -15,16 +15,9 @@ alias v="nvim"
 alias vi="nvim"
 alias py='python3'
 alias py2='python2'
-alias fuckgfw='proxychains4 -q'
 
 alias rm="rm -i"
 alias cp="cp -i"
-
-# functional aliases
-alias ducks="du -cks * | sort -rn | head -11"
-alias sock_stat="netstat -n | awk '/^tcp/ {++S[\$NF]} END {for(a in S) print a, S[a]}'"
-alias nettop="nettop -nm tcp"
-
 
 source $ZSH/oh-my-zsh.sh
 bindkey -e

@@ -1,25 +1,35 @@
 {
 	"segments": {
-		"left": [
-		],
 		"right": [
 			{
-				"function": "powerline.segments.common.net.network_load",
-				"draw_hard_divider": false,
-				"after": " "
+				"function": "powerline.segments.common.net.network_load"
 			},
 			{
 				"function": "powerlinemem.mem_usage.mem_usage",
 				"args": {
 					"short": true
 				},
-				"draw_hard_divider": false,
-				"before": " "
+				"draw_hard_divider": false
 			},
 			{
-				"function": "powerline.segments.common.sys.cpu_load_percent",
-				"priority": 50
-			}
+				"function": "powerline.segments.common.sys.cpu_load_percent"
+			},
+      {
+        "function": "powerline.segments.common.wthr.weather",
+        "args" : {
+          "unit": "C",
+          "location_query": "Sydney, Australia"
+        }
+      },
+      {
+        "function": "powerline.segments.common.bat.battery",
+        "args": {
+          "gamify": true
+        }
+      },
+      {
+        "function": "powerline.segments.common.sys.uptime"
+      }
 		]
 	}
 }
