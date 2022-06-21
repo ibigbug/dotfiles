@@ -33,7 +33,7 @@ tmux_init()
   tmux -2 attach-session -d
 }
 
-if which tmux 2>&1 >/dev/null; then
+if command -v tmux >/dev/null 2>&1; then
   test -z "$TMUX" && (tmux attach || tmux_init)
 fi
 
