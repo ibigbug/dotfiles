@@ -1,13 +1,17 @@
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+source $HOME/.antigen.zsh
 
-DISABLE_AUTO_UPDATE="true"
+antigen use oh-my-zsh
 
-ZSH_THEME="candy"
+antigen bundle git
+antigen bundle python
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
 
-DISABLE_UNTRACKED_FILES_DIRTY="true"
+antigen theme "candy"
 
-plugins=(python git docker)
+antigen apply
+
+
 
 alias e="emacsclient"
 alias em="emacs -nw"
@@ -19,7 +23,6 @@ alias py2='python2'
 alias rm="rm -i"
 alias cp="cp -i"
 
-source $ZSH/oh-my-zsh.sh
 bindkey -e
 
 export LANG=en_US.UTF-8
