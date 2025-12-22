@@ -30,6 +30,9 @@ export LANG=en_US.UTF-8
 export EDITOR='nano'
 export ALTERNATE_EDITOR="vim"
 
+# make PATH available for tmux
+. $HOME/.envrc
+
 tmux_init()
 {
   tmux new-session -s "daily-works" -d -n "fg-jobs" -c $HOME
@@ -45,6 +48,4 @@ if command -v tmux >/dev/null 2>&1 && [ -z "$TMUX" ]; then
     tmux attach || tmux_init
   fi
 fi
-
-. $HOME/.envrc
 
