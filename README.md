@@ -6,6 +6,8 @@ Install https://github.com/tmux-plugins/tpm
 
 <Prefix> I to install plugins
 
+cp/ln tmux-powerline to ~/.config/
+
 
 ## tmux crash
 
