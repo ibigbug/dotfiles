@@ -1,12 +1,18 @@
 # dotfiles
 
-# Tmux
+## Tmux
 
 Install https://github.com/tmux-plugins/tpm
 
 <Prefix> I to install plugins
 
 cp/ln tmux-powerline to ~/.config/
+
+## Rainbarf
+
+brew install rainbarf
+
+ln $PWD/.rainbarf.conf $HOME
 
 
 ## tmux crash
