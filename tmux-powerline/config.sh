@@ -9,7 +9,7 @@ TMUX_POWERLINE_LEFT_STATUS_SEGMENTS=(
 	"wan_ip 24 255"
 )
 TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
-	"weather 37 255"
+	#"weather 37 255"
     #"rainbarf 0 ${TMUX_POWERLINE_DEFAULT_FOREGROUND_COLOR}"
 	#"ifstat_sys 30 155"
     "date_day 235 136"
