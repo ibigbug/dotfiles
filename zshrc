@@ -39,13 +39,16 @@ tmux_init()
   tmux -2 attach-session -d
 }
 
-if command -v tmux >/dev/null 2>&1 && [ -z "$TMUX" ]; then
-  echo -n "Start tmux? (y/n) [y]: "
-  read -k 1 -t 9 response
-  echo ""
+# Only prompt for tmux if not in VS Code and not already in a tmux session
+if [ "$TERM_PROGRAM" != "vscode" ]; then
+  if command -v tmux >/dev/null 2>&1 && [ -z "$TMUX" ]; then
+    echo -n "Start tmux? (y/n) [y]: "
+    read -k 1 -t 9 response
+    echo ""
 
-  if [[ ! "$response" =~ ^[Nn]$ ]]; then
-    tmux attach || tmux_init
+    if [[ ! "$response" =~ ^[Nn]$ ]]; then
+      tmux attach || tmux_init
+    fi
   fi
 fi
 
