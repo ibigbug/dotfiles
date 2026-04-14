@@ -20,6 +20,8 @@ window-padding-y = 8
 window-decoration = true
 window-save-state = always
 macos-titlebar-style = tabs
+macos-option-as-alt = left
+
 
 # Cursor
 cursor-style = block
