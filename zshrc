@@ -36,8 +36,8 @@ tmux_init()
   tmux -2 attach-session -d
 }
 
-# Only prompt for tmux if not in VS Code and not already in a tmux session
-if [ "$TERM_PROGRAM" != "vscode" ]; then
+# Only prompt for tmux if not in VS Code / Orca and not already in a tmux session
+if [[ "$TERM_PROGRAM" != "vscode" && "$TERM_PROGRAM" != [Oo]rca ]]; then
   if command -v tmux >/dev/null 2>&1 && [ -z "$TMUX" ]; then
     echo -n "Start tmux? (y/n) [y]: "
     read -k 1 -t 9 response
